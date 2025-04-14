@@ -14,4 +14,14 @@ SAD:
 git status
 git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
 git clean -fd
+
+---
+
+MAYB:
+
+git diff
+git log --oneline
+git reset --soft HEAD~1 ## Undo last withotu discard changes
+git checkout -b new-branch 
+git pull --rebase # Pull without request
 ```
