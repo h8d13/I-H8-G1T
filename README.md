@@ -32,7 +32,7 @@ git reset --hard HEAD~x         or         git reset --hard origin/master       
 git clean -fd
 ```
 ---
-### 🧠 USEFUL:
+### 🧠USEFUL:
 ```
 git commit --amend            # Edit last 
 git stash                     # Temporarily save changes without committing
