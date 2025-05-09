@@ -4,7 +4,7 @@
 
 `alias suicide="echo 'feat: '$(date +%d%m%Y)'-'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 4)"`
 
-###😄HAPPY:
+### 😄HAPPY:
 
 ```
 git add .
@@ -12,14 +12,14 @@ git commit -m "suicide"
 git push origin master
 ```
 ---
-###😢SAD:
+### 😢SAD:
 ```
 git status
 git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
 git clean -fd
 ```
 ---
-###🫤MAYB:
+### 🫤MAYB:
 ```
 git diff
 git log --oneline
