@@ -25,13 +25,6 @@ git checkout -b new-branch
 git pull --rebase # Pull without request
 ```
 ---
-### 😢SAD:
-```
-git status
-git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
-git clean -fd
-```
----
 ### 🧠USEFUL:
 ```
 git commit --amend            # Edit last 
@@ -42,8 +35,13 @@ git blame file.txt
 git log --author="username"   # For more blaming        
 ```
 ---
-
-
+### 😢SAD:
+```
+git status
+git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
+git clean -fd
+```
+---
 
 ## Notes:
 
