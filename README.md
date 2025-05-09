@@ -1,10 +1,14 @@
 # I-H8-G1T
 
+### Smart alias
+
+`alias suicide="echo 'feat: '$(date +%d%m%Y)'-'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 4)""`
+
 ```
 HAPPY:
 
 git add .
-git commit -m "message" 
+git commit -m "suicide" 
 git push origin master
 
 ---
@@ -25,3 +29,8 @@ git reset --soft HEAD~1 ## Undo last withotu discard changes
 git checkout -b new-branch 
 git pull --rebase # Pull without request
 ```
+
+
+## note:
+
+"Master" might be "main" for you.
