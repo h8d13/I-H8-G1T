@@ -12,13 +12,6 @@ git commit -m "suicide"
 git push origin master
 ```
 ---
-### 😢SAD:
-```
-git status
-git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
-git clean -fd
-```
----
 ### 🫤MAYB:
 ```
 git diff
@@ -28,6 +21,14 @@ git checkout -b new-branch
 git pull --rebase # Pull without request
 ```
 ---
+### 😢SAD:
+```
+git status
+git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
+git clean -fd
+```
+---
+
 
 ## note:
 
