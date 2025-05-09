@@ -1,5 +1,9 @@
 # I-H8-G1T
 
+## Basics
+> `git init .`
+> `git clone <url>`
+
 ## Smart alias
 
 `alias suicide="echo 'feat: '$(date +%d%m%Y)'-'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 4)"`
@@ -28,9 +32,21 @@ git reset --hard HEAD~x         or         git reset --hard origin/master       
 git clean -fd
 ```
 ---
+### 🧠 USEFUL:
+```
+git commit --amend            # Edit last 
+git stash                     # Temporarily save changes without committing
+git stash pop                 # Apply and remove 
+git branch -D branch-name     # Force delete a branch
+git blame file.txt
+git log --author="username"   # For more blaming        
+```
+---
 
 
-## note:
+
+## Notes:
 
 Go to `Settings > Keys` for access.
 "Master" might be "main" for you.
+
