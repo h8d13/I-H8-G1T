@@ -47,12 +47,13 @@ git clean -fd
 
 "Master" might be "main" for you.
 
-
+```
 ssh-keygen -t ed25519
 cat id_ed25519.pub then copy its output Go to `Settings > Keys` for access.
 eval "$(ssh-agent -s)"
 Agent pid 13409
 ssh-add ~/.ssh/id_ed25519
+```
 
 ---
 
