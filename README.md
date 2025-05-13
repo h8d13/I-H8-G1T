@@ -4,10 +4,6 @@
 > `git init .`
 > `git clone <url>`
 
-## Smart alias
-
-`alias suicide="echo 'feat: '$(date +%d%m%Y)'-'$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 4)"`
-
 ### 😄HAPPY:
 
 ```
@@ -57,3 +53,18 @@ ssh-add ~/.ssh/id_ed25519
 
 ---
 
+Now for the lazy ones like me: I added to my bashrc then sourced.
+
+```
+suicome() {
+  suicide=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 8; echo)
+  echo "Random commit suicide message: \"$suicide\""
+  git add .
+  read -p "Are you sure you want to commit and push to origin/master? [y/N] " confirm
+  if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    git commit -m "$suicide" & git push origin master
+  else
+    echo "Aborted."
+  fi
+}
+``` 
