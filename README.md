@@ -37,6 +37,7 @@ git status
 git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
 git clean -fd
 ```
+> Can also browse files at different moments by going to commits area and finding where you f*cked it, download zip, then meld to compare to current code.
 ---
 
 ## Notes:
