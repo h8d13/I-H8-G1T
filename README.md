@@ -57,12 +57,33 @@ Now for the lazy ones like me: I added to my bashrc then sourced.
 
 ```
 comsui() {
-  suicide=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 8; echo)
-  echo "Random commit suicide message: \"$suicide\""
+  # ID + Date + Count
+  randid=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 6)
+  today=$(date "+%m-%d")
+  count_file="/tmp/commit_count_$today"
+  if [ ! -f "$count_file" ]; then
+    echo "1" > "$count_file"
+    chmod 644 "$count_file"
+  fi
+  count=$(cat "$count_file" 2>/dev/null || echo "1")
+  # Ensure count is a number
+  count=$(($count + 0))
+  
+  # Create full message
+  msg="$randid $(date "+%H:%M") #$(printf "%03d" $count)"
+  
+  echo "Commit suicide message: \"$msg\""
   git add .
-  read -p "Are you sure you want to commit and push to origin/master? [y/N] " confirm
+  read -p "Commit and push to origin/master? [y/N] " confirm
   if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    git commit -m "$suicide" && sleep 1 && git push origin master
+    if git commit -m "$msg" && git push origin master; then
+      # Increment count and write back to file
+      count=$((count + 1))
+      echo "$count" > "$count_file"
+      echo "Count incremented to $count"
+    else
+      echo "Git operations failed, count not incremented."
+    fi
   else
     echo "Aborted."
   fi
