@@ -29,7 +29,7 @@ git pull --rebase # Pull without request
 git status
 
 git reset --hard <id>
-git git push --force-with-lease
+git push --force-with-lease
 ```
 > Can also browse files at different moments by going to commits area and finding where you f*cked it, download zip, then meld to compare to current code.
 ---
