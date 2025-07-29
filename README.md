@@ -20,22 +20,16 @@ git reset --soft HEAD~1 ## Undo last withotu discard changes
 git checkout -b new-branch 
 git pull --rebase # Pull without request
 ```
----
-### 🧠USEFUL:
-```
-git commit --amend            # Edit last 
-git stash                     # Temporarily save changes without committing
-git stash pop                 # Apply and remove 
-git branch -D branch-name     # Force delete a branch
-git blame file.txt
-git log --author="username"   # For more blaming        
-```
+---   
+
 ---
 ### 😢SAD:
+
 ```
 git status
-git reset --hard HEAD~x         or         git reset --hard origin/master          or    git reset --hard HEAD
-git clean -fd
+
+git reset --hard <id>
+git git push --force-with-lease
 ```
 > Can also browse files at different moments by going to commits area and finding where you f*cked it, download zip, then meld to compare to current code.
 ---
